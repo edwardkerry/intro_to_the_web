@@ -13,6 +13,7 @@ get '/shotgun_test' do
 end
 
 get '/cat' do
+  @name = %w[Amigo Oscar Viking].sample
   # Alternatively could put html in separate file: File.read('cat_html_file.html')
   erb(:index)
 end

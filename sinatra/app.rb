@@ -18,9 +18,13 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   # Alternatively could put html in separate file: File.read('cat_html_file.html')
   erb(:index)
+end
+
+get '/named-cat' do
+  erb(:form)
 end
